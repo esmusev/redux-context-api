@@ -1,9 +1,9 @@
 import reducer, {initialState} from "../reducers/someReducer";
-import createStore from "./createStore";
+import useStore from "./useStore";
 import Store from "./Store";
 
 const Provider = ({ children }) => {
-    const store = createStore(reducer, initialState);
+    const store = useStore(reducer, initialState);
     return <Store.Provider value={store}>{children}</Store.Provider>;
 };
 
