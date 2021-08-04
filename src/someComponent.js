@@ -12,6 +12,7 @@ class SomeComponent extends Component{
     render(){
         return (
         <div>
+            <h1>Class component</h1>
             <button onClick={this.handleOnClick}>
                 ADD +1
             </button>
@@ -29,7 +30,7 @@ class SomeComponent extends Component{
 
                 }}
             </Store.Consumer>
-            <p>This is context api data from props:</p>
+            <p>This is data from mapStateToProps:</p>
             <h1>{this.props.data}</h1>
         </div>
         )
