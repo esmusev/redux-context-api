@@ -4,7 +4,6 @@ import Store from "./context-store/Store";
 
 class SomeComponent extends Component{
     handleOnClick = event => {
-        console.log(this.props.data)
         this.props.dataAdd();
     }
     handleReset = event => {
@@ -21,7 +20,6 @@ class SomeComponent extends Component{
             </button>
             <Store.Consumer>
                 {(state) => {
-                    console.log(state.state);
                     return (
                         <div>
                             <p>data from context consumer:</p>

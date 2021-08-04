@@ -7,7 +7,6 @@ export const initialState = {
 function someReducer (state, action){
     switch (action.type){
         case ADD_COUNTER:
-            console.log(state)
             return {...state, data: state.data+1
             };
         case RESET_COUNTER:

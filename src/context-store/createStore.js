@@ -1,8 +1,19 @@
+import {useState} from "react";
+
 const createStore = (reducer, initialState) => {
-    let state = initialState;
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [state, setState] = useState(initialState)
+
+    const dispatch = action => {
+        setState( reducer(state, action));
+        return action
+    }
+
     return {
-        dispatch: action => { state = reducer(state, action) },
-        state: () => state,
+        dispatch,
+        state,
     }
 }
+
 export default createStore;
